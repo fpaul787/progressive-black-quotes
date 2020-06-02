@@ -13,32 +13,39 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="progressive black thought generator">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/webslides.css">
     <title>Progressive Black Quotes</title>
 </head>
 
-<body>
-    <main>
-        <div id="slider">
-            <div class="pic-slide" id="pic">
-                <img src="images/Malcolm-X.jpg" alt="">
-            </div>
-            <div class="quote-slide">
-                <p id="quote">
-                    Lorem ipsum dolor sit amet consectetur,
-                    adipisicing elit. Doloribus laudantium
-                    beatae repellendus. Similique placeat
-                    amet pariatur ducimus eligendi asperiores
-                    dolor minus est quos natus. Voluptate.
-                </p>
-            </div>
-        </div>
-        <div id="buttons">
-            <button id="prev">Prev</button>
-            <button id="pause">Pause</button>
-            <button id="next">Next</button>
-        </div>
+<body id="bodyStyle">
+    <main role="main">
+        <article id="webslides" class="vertical">
+            <!-- Slide 1 -->
+            <section >
+                <div id="slider">
+                    <div id="pic">
+                        <img src="images/Malcolm-X.jpg" alt="Malcolm-X">                    
+                    </div>                   
+                    <div>                    
+                        <p class="text-intro" id="textBlock">
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit. Doloribus laudantium
+                            beatae repellendus. Similique placeat
+                            amet pariatur ducimus eligendi asperiores
+                            dolor minus est quos natus. Voluptate.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Slide 2  -->
+            <section>
+                <span class="background" style="background-image:url('images/Malcolm-X.jpg' )"></span>
+                Slide 2
+            </section>
+        </article>       
     </main>
+    <script src="js/script.js"></script>
+    <script src="js/webslides.js"></script>
+    <script>window.ws = new WebSlides();</script>
 </body>
-<script src="js/script.js"></script>
-
 </html>
