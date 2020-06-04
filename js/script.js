@@ -2,9 +2,15 @@
 
 
 
-function changeSlide() {
-    // document.getElementById('pic').innerHTML = "pic"
-    document.getElementById('quote').innerHTML = "quote change"
+function init(){
+    var section = document.getElementById('webslides');
+    if(section){
+        // alert('Section loaded')
+
+        for(i=0; i<1; i++){
+            alert(i)
+        }
+    }
 }
 
-document.getElementById('next').onclick = changeSlide;
+init();

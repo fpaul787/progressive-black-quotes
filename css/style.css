@@ -12,6 +12,13 @@
     color: #ffffff;
 }
 
+#creditBlock{
+  margin-left: auto;
+  text-align: center;
+  font-size: xx-large;
+  color: #ffffff;
+}
+
 #bodyStyle{
     background-color: #000000;
 }
