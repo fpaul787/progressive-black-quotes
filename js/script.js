@@ -53,27 +53,22 @@ function createSlides(data){
         // alert('')
         var webslides = document.getElementById('webslides');   
         
-        
+        // console.log(data[0])
         var section;
         for(i=0; i<3; i++){
             section = document.createElement('section');
-            section.setAttribute('id', `section-${i+1}`);
             section.setAttribute('class', 'slide')
             section.innerHTML = `            
                 <div id="slider">
-                    <div class=${i} id="pic">
-                        <img src="images/Malcolm-X.jpg" alt="Malcolm-X">
-                        <p id="creditBlock">Credit:</p>                   
+                    <div id="pic">
+                        <img src=${data[0].pic} alt="Malcolm-X">
+                        <p id="creditBlock">Credit: ${data[0].pic_credit}</p>                   
                     </div>                   
                     <div>                    
                         <p class="text-context" id="textBlock">
-                            "Lorem ipsum dolor sit amet consectetur,
-                            adipisicing elit. Doloribus laudantium
-                            beatae repellendus. Similique placeat
-                            amet pariatur ducimus eligendi asperiores
-                            dolor minus est quos natus. Voluptate."
+                            "${data[0].quote}"
                             <br><br>
-                            From: Malcolm-X
+                            From: ${data[0].name}
                         </p>                        
                     </div>
                 </div>            
