@@ -52,14 +52,12 @@ function createSlides(data){
     
     
     if(typeof data !== "undefined"){
-        // alert('')
         var webslides = document.getElementById('webslides');   
         
         console.log(data)
         var section;
         for(i=0; i<data.length; i++){
             section = document.createElement('section');
-            section.setAttribute('class', 'slide')
             section.innerHTML = `            
                 <div id="slider">
                     <div id="pic">
@@ -80,11 +78,9 @@ function createSlides(data){
        
         load_js();
     }else{
-        // alert('not loaded')
         
     }
 }
 
 loadJsonInit();
-// setTimeout(createSlides, 5000);
 createSlides();
