@@ -1,41 +1,40 @@
-
-
-
- function loadJSON(callback) {   
+/**
+ * Fetches json file
+ * @param {*} callback function to call after request is made
+ */
+function loadJSON(callback) {   
 
     var xobj = new XMLHttpRequest();
-        xobj.overrideMimeType("application/json");
-    xobj.open('GET', '../qoutes.json', true); // Replace 'my_data' with the path to your file
+    xobj.overrideMimeType("application/json");
+    xobj.open('GET', '../qoutes.json', true); 
+
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            // Required use of an anonymous callback as .open will NOT 
+            // return a value but simply returns undefined in asynchronous mode
             callback(xobj.responseText);
           }
     };
     xobj.send(null);  
- }
-
-var data;
-function intermediate(json){
-    data = json;
-    createSlides(data.quotes);
 }
 
+/**
+ * load json file and call create slides
+ */
 function loadJsonInit(){
     var data;
     loadJSON(function(response){
-        // console.log(response)
         data = JSON.parse(response);   
-        // console.log(data)     
-        intermediate(data)
+        createSlides(data.quotes)
     })
 }
 
-function load_js()
-   {
+/**
+ * Re-load webslides javascript file and create webSlides object
+ */
+function load_js(){
        
       var head= document.getElementsByTagName('head')[0];
-    //   console.log(head)
       var script= document.createElement('script');
       script.src= 'js/webslides.js';
       head.appendChild(script);
@@ -44,17 +43,18 @@ function load_js()
 
       newScript.innerHTML= "window.ws = new WebSlides();";
       head.appendChild(newScript)
+}
 
-    //   console.log(head)
-   }
-
+/**
+ * Creates slides by changing innerHTML of webslides element
+ * @param {JSON} data json data to create slides
+ */
 function createSlides(data){
     
     
     if(typeof data !== "undefined"){
         var webslides = document.getElementById('webslides');   
         
-        console.log(data)
         var section;
         for(i=0; i<data.length; i++){
             section = document.createElement('section');
