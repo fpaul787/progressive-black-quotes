@@ -3,6 +3,23 @@
   grid-template-columns: auto auto;
 }
 
+#pic img{
+  border: 2px solid #ffffff;
+  max-width: 500px;
+  min-width: 300px;
+  max-height: 500px;
+  margin-left: 50px;
+}
+
+#pic p{
+  font-size: large;
+  word-wrap: break-word;  
+  text-align: center;
+
+}
+
+
+
 #textBlock{
     width: 80%;
     margin-top: 100px;
@@ -13,7 +30,7 @@
 }
 
 #creditBlock{
-  margin-left: auto;
+  /* margin-left: auto; */
   text-align: center;
   font-size: xx-large;
   color: #ffffff;

@@ -6,7 +6,7 @@ function loadJSON(callback) {
 
     var xobj = new XMLHttpRequest();
     xobj.overrideMimeType("application/json");
-    xobj.open('GET', '../qoutes.json', true); 
+    xobj.open('GET', 'qoutes.json', true); 
 
     xobj.onreadystatechange = function () {
           if (xobj.readyState == 4 && xobj.status == "200") {
@@ -68,7 +68,7 @@ function createSlides(data){
                         <p class="text-context" id="textBlock">
                             "${data[i].quote}"
                             <br><br>
-                            From: ${data[i].name}
+                            <i>${data[i].name}</i>
                         </p>                        
                     </div>
                 </div>            
