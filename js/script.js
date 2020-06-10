@@ -68,7 +68,7 @@ function createSlides(data){
                         <p class="text-context" id="textBlock">
                             "${data[i].quote}"
                             <br><br>
-                            <i>${data[i].name}</i>
+                            <i id="author">${data[i].name}</i>
                         </p>                        
                     </div>
                 </div>            

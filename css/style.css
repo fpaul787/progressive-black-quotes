@@ -15,7 +15,10 @@
   font-size: large;
   word-wrap: break-word;  
   text-align: center;
+}
 
+#author{
+  color: #ffa500;
 }
 
 
